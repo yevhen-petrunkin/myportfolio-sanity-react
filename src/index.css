@@ -3,13 +3,14 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
+  --primary-color: #fff4ee;
+  --secondary-color: #325082;
+  --black-color: #281713;
+  --lightGray-color: #fff4ee;
+  --gray-color: #487e91;
+  --brown-color: #4a271e;
   --white-color: #ffffff;
+  --accent-color: #e52020;
 }
 
 * {

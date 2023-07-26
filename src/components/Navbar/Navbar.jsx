@@ -11,9 +11,6 @@ const Navbar = () => {
 
   return (
     <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        <img src={images.logo} alt="logo" />
-      </div>
       <ul className="app__navbar-links">
         {navItems.map((item) => (
           <li key={`link-${item}`} className="app__flex p-text">
@@ -22,29 +19,28 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
+      <div className="app__navbar-btn">
+        <HiMenuAlt4 onClick={() => setToggle(true)} />
+      </div>
 
       {/* Mobile Menu */}
-      <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
 
-        {toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
-          >
+      {toggle && (
+        <div className={"app__navbar-modal"}>
+          <div className="app__navbar-close">
             <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {navItems.map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToggle(false)}>
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </div>
+          </div>
+          <ul>
+            {navItems.map((item) => (
+              <li key={item}>
+                <a href={`#${item}`} onClick={() => setToggle(false)}>
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

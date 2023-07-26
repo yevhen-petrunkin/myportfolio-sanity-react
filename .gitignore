@@ -1,5 +1,5 @@
 # backend
-/backend_sanity
+/backend_sanity/node_modules
 
 # dependencies
 /node_modules

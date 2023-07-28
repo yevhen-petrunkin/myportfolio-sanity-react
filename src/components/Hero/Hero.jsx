@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <div className="hero">
+    <section className="hero">
       <div className="hero__heading">
         <h1 className="hero__title">I'm Yevhen Petrunkin</h1>
         <h2 className="hero__undertitle">
@@ -36,7 +36,7 @@ const Hero = () => {
         </h2>
         Developer
       </div>
-    </div>
+    </section>
   );
 };
 

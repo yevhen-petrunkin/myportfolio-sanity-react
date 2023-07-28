@@ -6,8 +6,8 @@
   --primary-color: #fff4ee;
   --secondary-color: #325082;
   --black-color: #281713;
-  --lightGray-color: #fff4ee;
-  --gray-color: #487e91;
+  --lightGray-color: #f5dddc;
+  --gray-color: #2f4858;
   --brown-color: #4a271e;
   --white-color: #ffffff;
   --accent-color: #e52020;
@@ -18,4 +18,8 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-color);
 }

@@ -14,16 +14,21 @@ const Navbar = () => {
       <ul className="app__navbar-links">
         {navItems.map((item) => (
           <li key={`link-${item}`} className="app__flex p-text">
-            <div />
             <a href={`#${item}`}>{item}</a>
           </li>
         ))}
       </ul>
-      <div className="app__navbar-btn">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
-      </div>
 
       {/* Mobile Menu */}
+
+      <div className="app__navbar-mobile">
+        <span className="app__navbar-btn">
+          <HiMenuAlt4 onClick={() => setToggle(true)} />
+        </span>
+        <span>My Portfolio</span>
+      </div>
+
+      {/* Mobile Modal */}
 
       {toggle && (
         <div className={"app__navbar-modal"}>

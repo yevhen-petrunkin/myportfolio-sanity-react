@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 
-import { Navbar, Hero } from "../../components";
+import { Navbar } from "../../components";
 
 const Header = () => {
   return (
@@ -12,4 +12,3 @@ const Header = () => {
 };
 
 export default Header;
-// export default AppWrap(Header, "home");

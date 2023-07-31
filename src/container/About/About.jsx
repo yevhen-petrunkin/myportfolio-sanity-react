@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-
-// import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
-import { urlFor, client } from "../../client";
 
-import { images } from "../../constants";
+import { MotionWrap } from "../../wrapper";
+import { urlFor, client } from "../../client";
 
 import Card from "../../components/Card/Card";
 
@@ -23,7 +21,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className="app__about">
+    <section id="about" className="app__section">
       <h2 className="head-text">
         Delivering <span>Best Solutions</span> <br />
         Tailored For <span>Client's Needs</span>
@@ -43,4 +41,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default MotionWrap(About);

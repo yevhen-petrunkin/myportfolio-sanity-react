@@ -5,11 +5,11 @@
   background-color: var(--lightGray-color);
   border-radius: 15px;
 
-  transition: transform 200ms ease-in;
+  transition: box-shadow 0.3s ease;
 
   &:hover,
   &:focus {
-    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   }
 
   .app__profile-img {
@@ -33,6 +33,7 @@
     margin-top: 1rem;
     font-size: 1.2rem;
     text-shadow: 1px 1px 12px var(--white-color);
+    color: var(--accent-color);
 
     @media screen and (min-width: 768px) {
       font-size: 1.4rem;

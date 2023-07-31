@@ -1,16 +1,11 @@
 export default {
-  name: 'testimonials',
-  title: 'Testimonials',
+  name: 'certificates',
+  title: 'Certificates',
   type: 'document',
   fields: [
     {
       name: 'name',
       title: 'Name',
-      type: 'string',
-    },
-    {
-      name: 'company',
-      title: 'Company',
       type: 'string',
     },
     {
@@ -22,8 +17,13 @@ export default {
       },
     },
     {
-      name: 'feedback',
-      title: 'Feedback',
+      name: 'certLink',
+      title: 'Link to Document',
+      type: 'string',
+    },
+    {
+      name: 'desc',
+      title: 'Description',
       type: 'string',
     },
   ],

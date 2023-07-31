@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section id="home" className="hero">
       <div className="hero__heading">
         <h1 className="hero__title">I'm Yevhen Petrunkin</h1>
         <h2 className="hero__undertitle">
@@ -24,15 +24,11 @@ const Hero = () => {
               "TypeScript",
               2000,
             ]}
-            wrapper="span"
+            wrapper="div"
             speed={10}
-            style={{
-              color: "#FF0000",
-              display: "inline-block",
-            }}
             repeat={Infinity}
             omitDeletionAnimation
-          />{" "}
+          />
         </h2>
         Developer
       </div>

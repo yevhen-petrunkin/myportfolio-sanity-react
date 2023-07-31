@@ -2,21 +2,23 @@ import React from "react";
 
 import "./App.scss";
 
-import { About, Footer, Header, Skills, Testimonial, Work } from "./container";
+import { Header, About, Work, Skills, Certificates, Footer } from "./container";
+import { AppWrap } from "./wrapper";
 import { Hero } from "./components";
 
 const App = () => {
   return (
     <div className="app">
       <Header />
-      <main>
+
+      <AppWrap>
         <Hero />
         <About />
-        {/* <Work /> */}
-        {/* <Skills /> */}
-        {/* <Testimonial /> */}
-      </main>
-      {/* <Footer /> */}
+        <Work />
+        <Skills />
+        <Certificates />
+        <Footer />
+      </AppWrap>
     </div>
   );
 };

@@ -1,0 +1,144 @@
+.app__skills-container {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4rem;
+
+  @media screen and (min-width: 901px) {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+.app__skills-list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app__skills-item {
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  div {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--lightGray-color);
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 150px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  p {
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    @media screen and (min-width: 480px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.app__skills-exp {
+  flex: 1;
+}
+
+.app__skills-exp-item {
+  padding: 1rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: var(--lightGray-color);
+  border-radius: 1rem;
+
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  @media screen and (min-width: 601px) {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+.app__skills-exp-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  list-style: none;
+
+  @media screen and (min-width: 601px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .app__skills-exp-work {
+    h3 {
+      text-align: center;
+      color: var(--accent-color);
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-align: center;
+      color: var(--gray-color);
+    }
+
+    @media screen and (min-width: 601px) {
+      h3,
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.app__skills-exp-year {
+  p {
+    font-weight: 800;
+    color: var(--secondary-color);
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-right: 1rem;
+  }
+}

@@ -10,7 +10,6 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-
       <AppWrap>
         <Hero />
         <About />

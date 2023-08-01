@@ -1,22 +1,52 @@
 .app__profile-item {
   padding: 1rem;
+
+  flex-basis: calc(100%);
+
   color: var(--black-color);
 
-  background-color: var(--lightGray-color);
+  background-color: var(--white-color);
   border-radius: 15px;
 
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.5s ease-in-out;
 
   &:hover,
   &:focus {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   }
 
+  &:hover .app__profile-img::after,
+  &:focus .app__profile-img::after {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 481px) {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+
+  @media screen and (min-width: 901px) {
+    flex-basis: calc((100% - 2rem) / 3);
+  }
+
+  @media screen and (min-width: 1441px) {
+    flex-basis: calc((100% - 3rem) / 4);
+  }
+
   .app__profile-img {
+    position: relative;
     width: 100%;
     height: 200px;
     border-radius: 15px;
     overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--black-color);
+      opacity: 0.1;
+      transition: opacity 500ms ease-in-out;
+    }
 
     @media screen and (min-width: 768px) {
       height: 300px;
@@ -31,8 +61,8 @@
 
   .app__profile-title {
     margin-top: 1rem;
+
     font-size: 1.2rem;
-    text-shadow: 1px 1px 12px var(--white-color);
     color: var(--accent-color);
 
     @media screen and (min-width: 768px) {

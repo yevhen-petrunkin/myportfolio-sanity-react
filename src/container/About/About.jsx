@@ -23,8 +23,7 @@ const About = () => {
   return (
     <section id="about" className="app__section">
       <h2 className="head-text">
-        Delivering <span>Best Solutions</span> <br />
-        Tailored For <span>Client's Needs</span>
+        My Brief <span>Profile</span>
       </h2>
 
       <ul className="app__profiles">

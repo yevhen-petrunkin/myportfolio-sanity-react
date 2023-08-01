@@ -31,12 +31,14 @@ const Certificates = () => {
             Documents & <span>Certificates</span>
           </h2>
 
-          <div className="app__certificate-item">
+          <div
+            className="app__certificate-item"
+            data-tip
+            data-for={certificates[currentIndex].name}
+          >
             <img
               src={urlFor(certificates[currentIndex].imageurl)}
               alt={certificates[currentIndex].name}
-              data-tip
-              data-for={certificates[currentIndex].name}
             />
 
             <div className="app__certificate-content">
@@ -82,7 +84,7 @@ const Certificates = () => {
             <ReactTooltip
               id={certificates[currentIndex].name}
               effect="solid"
-              arrowColor="#fff"
+              arrowColor="#f5f9ff"
               className="tooltip"
             >
               {certificates[currentIndex].desc}

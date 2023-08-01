@@ -82,15 +82,15 @@
 
 .app__social {
   position: fixed;
-  top: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 0.5rem;
+  left: 0.5rem;
+  transform: translateX(0%);
   z-index: 2;
 
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   gap: 0.5rem;
 
   list-style: none;
@@ -99,47 +99,47 @@
     width: 40px;
     height: 40px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     color: var(--secondary-color);
     background-color: #f1fcf3;
     border: 1px solid #f1fcf3;
     border-radius: 50%;
     box-shadow: 0.5px 0.5px 2px var(--black-color);
 
-    cursor: pointer;
-
     transition: all 200ms ease-in;
 
-    svg {
-      width: 15px;
-      height: 15px;
+    a {
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       color: currentColor;
+      cursor: pointer;
+
+      svg {
+        width: 15px;
+        height: 15px;
+        color: currentColor;
+      }
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: var(--black-color);
       border-color: var(--black-color);
       color: var(--primary-color);
     }
   }
-
-  @media screen and (min-width: 601px) {
-    bottom: 2rem;
-    left: 0.5rem;
-    flex-direction: column;
-    transform: translateX(0%);
-  }
 }
 
 .app__section {
   padding: 2rem 3.5rem;
-  min-height: 40vh;
+  min-height: 20vh;
 
   @media screen and (min-width: 1024px) {
-    min-height: 90vh;
+    min-height: 20vh;
   }
 }
 

@@ -11,14 +11,21 @@
 
   .app__work-filter-item {
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
-    font-weight: 800;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
     margin: 0.5rem;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #000;
+
+    @media screen and (min-width: 601px) {
+      font-size: 1rem;
+    }
+
+    background-color: var(--white-color);
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: var(--secondary-color);
@@ -40,27 +47,17 @@
 .app__work-portfolio {
   margin-top: 2rem;
 
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  display: flex;
   justify-content: center;
-
+  align-items: stretch;
+  flex-wrap: wrap;
   gap: 1rem;
 
   list-style: none;
 
-  @media screen and (min-width: 480px) {
-    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-  }
-
-  @media screen and (min-width: 900px) {
-    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
-  }
-
-  @media screen and (min-width: 1440px) {
-    gap: 2rem;
-  }
-
   .app__work-item {
+    flex-basis: calc(100%);
+
     padding: 1rem;
     color: var(--black-color);
 
@@ -68,11 +65,24 @@
     border-radius: 15px;
     cursor: pointer;
 
-    transition: box-shadow 0.3s ease;
+    transition: all 0.5s ease-in-out;
 
     &:hover,
     &:focus {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      background-color: var(--white-color);
+    }
+
+    @media screen and (min-width: 481px) {
+      flex-basis: calc((100% - 1rem) / 2);
+    }
+
+    @media screen and (min-width: 901px) {
+      flex-basis: calc((100% - 2rem) / 3);
+    }
+
+    @media screen and (min-width: 1441px) {
+      flex-basis: calc((100% - 3rem) / 4);
     }
   }
 }

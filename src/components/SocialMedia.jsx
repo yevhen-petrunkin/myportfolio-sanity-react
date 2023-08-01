@@ -5,16 +5,48 @@ import { FaTelegram, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 const SocialMedia = () => (
   <ul className="app__social">
     <li>
-      <FaLinkedin />
+      <a
+        href="https://www.linkedin.com/in/yevhen-petrunkin-503617259/"
+        className="sidebar__link"
+        target="_blank"
+        rel="noreferrer noopener"
+        title="Contact me on LinkedIn"
+      >
+        <FaLinkedin />
+      </a>
     </li>
     <li>
-      <FaGithub />
+      <a
+        href="https://github.com/yevhen-petrunkin"
+        className="sidebar__link"
+        target="_blank"
+        rel="noreferrer noopener"
+        title="See my GitHub"
+      >
+        <FaGithub />
+      </a>
     </li>
     <li>
-      <FaTelegram />
+      <a
+        href="https://t.me/yevhen_petrunkin"
+        className="sidebar__link"
+        target="_blank"
+        rel="noreferrer noopener"
+        title="Contact me on Telegram"
+      >
+        <FaTelegram />
+      </a>
     </li>
     <li>
-      <FaFacebook />
+      <a
+        href="https://www.facebook.com/profile.php?id=100011788286630"
+        className="sidebar__link"
+        target="_blank"
+        rel="noreferrer noopener"
+        title="Contact me on Facebook"
+      >
+        <FaFacebook />
+      </a>
     </li>
   </ul>
 );

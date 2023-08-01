@@ -2,19 +2,21 @@ import React, { useState, useEffect } from "react";
 import "./Work.scss";
 
 import { motion } from "framer-motion";
+import { urlFor, client } from "../../client";
 
 import { filterItems } from "../../constants";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
-
 import { MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+import { Project } from "../../components";
 
 const Work = () => {
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
+  const [toggle, setToggle] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -39,6 +41,8 @@ const Work = () => {
       }
     }, 500);
   };
+
+  const handleClose = () => setToggle(false);
 
   return (
     <section id="work" className="app__section alternate-bg">
@@ -66,9 +70,16 @@ const Work = () => {
         className="app__work-portfolio"
       >
         {filterWork.map((work, index) => (
-          <article className="app__work-item" key={index}>
+          <article
+            className="app__work-item"
+            key={index}
+            onClick={() => {
+              setCurrentProject(work);
+              setTimeout(() => setToggle(true), 300);
+            }}
+          >
             <div className="app__work-img app__flex">
-              <img src={urlFor(work.imageUrls[0])} alt={work.name} />
+              <img src={urlFor(work.imageUrls[0])} alt={work.title} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -123,6 +134,8 @@ const Work = () => {
           </article>
         ))}
       </motion.div>
+
+      {toggle && <Project project={currentProject} onClose={handleClose} />}
     </section>
   );
 };

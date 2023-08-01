@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from "react";
+import "./Skills.scss";
+
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
+import { urlFor, client } from "../../client";
+
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
+import { IoSchool } from "react-icons/io5";
+import { MdOutlineWork } from "react-icons/md";
 
 import { MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
-import "./Skills.scss";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -26,7 +36,7 @@ const Skills = () => {
   return (
     <section id="skills" className="app__section">
       <h2 className="head-text">
-        Skills & <span>Experiences</span>
+        Training, Experience & <span>Skills</span>
       </h2>
 
       <div className="app__skills-container">
@@ -49,12 +59,23 @@ const Skills = () => {
           ))}
         </motion.ul>
 
-        <ul className="app__skills-exp">
+        <VerticalTimeline>
           {experiences.map((experience) => (
-            <motion.li className="app__skills-exp-item" key={experience.year}>
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-              </div>
+            <VerticalTimelineElement
+              key={experience.year}
+              date={experience.year}
+              className={
+                experience.iswork
+                  ? "vertical-timeline-element--work"
+                  : "vertical-timeline-element--education"
+              }
+              icon={experience.iswork ? <MdOutlineWork /> : <IoSchool />}
+              iconStyle={
+                experience.iswork
+                  ? { background: "#5d606f", color: "#f5f9ff" }
+                  : { background: "#528ff8", color: "#f5f9ff" }
+              }
+            >
               <motion.ul className="app__skills-exp-works">
                 {experience?.works?.map((work) => (
                   <li key={work.name}>
@@ -80,9 +101,9 @@ const Skills = () => {
                   </li>
                 ))}
               </motion.ul>
-            </motion.li>
+            </VerticalTimelineElement>
           ))}
-        </ul>
+        </VerticalTimeline>
       </div>
     </section>
   );

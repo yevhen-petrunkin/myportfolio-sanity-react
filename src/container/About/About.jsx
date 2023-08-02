@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./About.scss";
 
-import { MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import sortArrByDate from "../../services/sortArrByDate";
 
+import { MotionWrap } from "../../wrapper";
 import Card from "../../components/Card/Card";
 
 const About = () => {
@@ -15,7 +16,7 @@ const About = () => {
     client
       .fetch(query)
       .then((data) => {
-        setAbouts(data);
+        setAbouts(sortArrByDate(data, true));
       })
       .catch((error) => console.error(error));
   }, []);

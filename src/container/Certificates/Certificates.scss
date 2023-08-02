@@ -27,14 +27,14 @@
     height: 100%;
 
     background-color: var(--black-color);
-    opacity: 0.2;
+    opacity: 0.1;
 
     transition: opacity 500ms ease-in-out;
   }
 
   &:hover::after,
   &:focus::after {
-    opacity: 0.1;
+    opacity: 0;
   }
 
   img {

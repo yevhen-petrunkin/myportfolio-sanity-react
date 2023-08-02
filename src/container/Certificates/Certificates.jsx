@@ -4,6 +4,8 @@ import "./Certificates.scss";
 import { urlFor, client } from "../../client";
 import ReactTooltip from "react-tooltip";
 
+import sortArrByDate from "../../services/sortArrByDate";
+
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { MotionWrap } from "../../wrapper";
 
@@ -19,7 +21,7 @@ const Certificates = () => {
     const query = '*[_type == "certificates"]';
 
     client.fetch(query).then((data) => {
-      setCertificates(data);
+      setCertificates(sortArrByDate(data, true));
     });
   }, []);
 

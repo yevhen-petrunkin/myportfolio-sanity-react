@@ -11,6 +11,8 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 
+import sortArrByDate from "../../services/sortArrByDate";
+
 import { IoSchool } from "react-icons/io5";
 import { MdOutlineWork } from "react-icons/md";
 
@@ -25,11 +27,11 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]';
 
     client.fetch(query).then((data) => {
-      setExperiences(data);
+      setExperiences(sortArrByDate(data, true));
     });
 
     client.fetch(skillsQuery).then((data) => {
-      setSkills(data);
+      setSkills(sortArrByDate(data, true));
     });
   }, []);
 
@@ -78,26 +80,24 @@ const Skills = () => {
             >
               <motion.ul className="app__skills-exp-works">
                 {experience?.works?.map((work) => (
-                  <li key={work.name}>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
+                  <li key={work.desc}>
+                    <div
                       className="app__skills-exp-work"
                       data-tip
-                      data-for={work.name}
+                      data-for={work.desc}
                     >
                       <h3 className="bold-text">{work.name}</h3>
                       <p className="p-text">{work.company}</p>
-                    </motion.div>
 
-                    <ReactTooltip
-                      id={work.name}
-                      effect="solid"
-                      arrowColor="#fff"
-                      className="tooltip"
-                    >
-                      {work.desc}
-                    </ReactTooltip>
+                      <ReactTooltip
+                        id={work.desc}
+                        effect="solid"
+                        arrowColor="#fff"
+                        className="tooltip"
+                      >
+                        {work.desc}
+                      </ReactTooltip>
+                    </div>
                   </li>
                 ))}
               </motion.ul>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
 import { filterItems } from "../../constants";
+import sortArrByDate from "../../services/sortArrByDate";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { MotionWrap } from "../../wrapper";
@@ -23,7 +24,7 @@ const Work = () => {
 
     client.fetch(query).then((data) => {
       setWorks(data);
-      setFilterWork(data);
+      setFilterWork(sortArrByDate(data, true));
     });
   }, []);
 

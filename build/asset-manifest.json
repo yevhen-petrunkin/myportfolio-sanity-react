@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/myportfolio-sanity-react/static/css/main.2ce3e977.css",
+    "main.js": "/myportfolio-sanity-react/static/js/main.d1c22462.js",
+    "static/media/about04.png": "/myportfolio-sanity-react/static/media/about04.fa7b3a72ed32b0e25bfb.png",
+    "static/media/about02.png": "/myportfolio-sanity-react/static/media/about02.7a3df03410ee756268ec.png",
+    "static/media/about01.png": "/myportfolio-sanity-react/static/media/about01.080509de05322b7aafda.png",
+    "static/media/bgWhite.png": "/myportfolio-sanity-react/static/media/bgWhite.79658cadae50b3b16ee5.png",
+    "static/media/profile.png": "/myportfolio-sanity-react/static/media/profile.ee489764521abe34026b.png",
+    "static/media/hero.jpg": "/myportfolio-sanity-react/static/media/hero.8bd597add20d3dc6758b.jpg",
+    "static/media/about03.png": "/myportfolio-sanity-react/static/media/about03.c26c2547bb1a423cf283.png",
+    "static/media/spotify.png": "/myportfolio-sanity-react/static/media/spotify.2b5e9be1eb1ab501e7cd.png",
+    "static/media/nb.png": "/myportfolio-sanity-react/static/media/nb.98f3253e32cc67a4cb5e.png",
+    "static/media/asus.png": "/myportfolio-sanity-react/static/media/asus.514bc34955008a92e09f.png",
+    "static/media/adidas.png": "/myportfolio-sanity-react/static/media/adidas.83df8153294f9137d308.png",
+    "static/media/bolt.png": "/myportfolio-sanity-react/static/media/bolt.64e7d9d30ece478ef3a0.png",
+    "static/media/redux.png": "/myportfolio-sanity-react/static/media/redux.c9be37e0fece29c624b0.png",
+    "static/media/email.png": "/myportfolio-sanity-react/static/media/email.0b765a37ba6bf81f0f4c.png",
+    "static/media/sass.png": "/myportfolio-sanity-react/static/media/sass.36e863bfbcb25c109d00.png",
+    "static/media/node.png": "/myportfolio-sanity-react/static/media/node.8683d89cf78ffae3d1f7.png",
+    "static/media/cpp.png": "/myportfolio-sanity-react/static/media/cpp.9002a804bbfa0354d0b8.png",
+    "static/media/graphql.png": "/myportfolio-sanity-react/static/media/graphql.0372057049181c5de51a.png",
+    "static/media/amazon.png": "/myportfolio-sanity-react/static/media/amazon.0a8be1f53138b5c52456.png",
+    "static/media/mobile.png": "/myportfolio-sanity-react/static/media/mobile.145d9ce0157a56f8fcd8.png",
+    "static/media/figma.png": "/myportfolio-sanity-react/static/media/figma.152e55329b6f1915967e.png",
+    "static/media/css.png": "/myportfolio-sanity-react/static/media/css.5721a3928fe43de6baf8.png",
+    "static/media/git.png": "/myportfolio-sanity-react/static/media/git.a54d3fa44e02f2f61e69.png",
+    "static/media/skype.png": "/myportfolio-sanity-react/static/media/skype.c8d7ee175da5b4c8a8ab.png",
+    "index.html": "/myportfolio-sanity-react/index.html",
+    "static/media/circle.svg": "/myportfolio-sanity-react/static/media/circle.134eeeb1e58895b892195fe8ed63bc9f.svg",
+    "main.2ce3e977.css.map": "/myportfolio-sanity-react/static/css/main.2ce3e977.css.map",
+    "main.d1c22462.js.map": "/myportfolio-sanity-react/static/js/main.d1c22462.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ce3e977.css",
+    "static/js/main.d1c22462.js"
+  ]
+}

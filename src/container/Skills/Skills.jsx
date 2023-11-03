@@ -36,7 +36,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section id="skills" className="app__section">
+    <section id="experience" className="app__section">
       <h2 className="head-text">
         Training, Experience & <span>Skills</span>
       </h2>

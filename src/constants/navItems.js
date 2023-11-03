@@ -1,3 +1,3 @@
-const navItems = ["home", "about", "work", "skills", "contact"];
+const navItems = ["home", "about", "projects", "experience", "contact"];
 
 export default navItems;

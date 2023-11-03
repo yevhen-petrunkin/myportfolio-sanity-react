@@ -28,6 +28,8 @@ import {
   SiPrisma,
   SiTypescript,
   SiReacthookform,
+  SiGraphql,
+  SiStrapi,
 } from "react-icons/si";
 
 const technologyImgArray = [
@@ -192,6 +194,16 @@ const technologyImgArray = [
     id: "lodash",
     keywords: ["lodash"],
     image: SiLodash,
+  },
+  {
+    id: "graphql",
+    keywords: ["graphql", "graph-ql", "graph ql"],
+    image: SiGraphql,
+  },
+  {
+    id: "strapi",
+    keywords: ["strapi", "strapi cms"],
+    image: SiStrapi,
   },
 ];
 

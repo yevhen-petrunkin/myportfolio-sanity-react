@@ -46,7 +46,7 @@ const Work = () => {
   const handleClose = () => setToggle(false);
 
   return (
-    <section id="work" className="app__section alternate-bg">
+    <section id="projects" className="app__section alternate-bg">
       <h2 className="head-text">
         My Creative <span>Portfolio</span>
       </h2>

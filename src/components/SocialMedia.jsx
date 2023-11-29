@@ -6,10 +6,10 @@ const SocialMedia = () => (
   <ul className="app__social">
     <li>
       <a
-        href="https://www.linkedin.com/in/yevhen-petrunkin-503617259/"
+        href="https://www.linkedin.com/in/yevhen-petrunkin"
         className="sidebar__link"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer noopener nofollow"
         title="Contact me on LinkedIn"
       >
         <FaLinkedin />
@@ -20,7 +20,7 @@ const SocialMedia = () => (
         href="https://github.com/yevhen-petrunkin"
         className="sidebar__link"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer noopener nofollow"
         title="See my GitHub"
       >
         <FaGithub />
@@ -31,7 +31,7 @@ const SocialMedia = () => (
         href="https://t.me/yevhen_petrunkin"
         className="sidebar__link"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer noopener nofollow"
         title="Contact me on Telegram"
       >
         <FaTelegram />
@@ -42,7 +42,7 @@ const SocialMedia = () => (
         href="https://www.facebook.com/profile.php?id=100011788286630"
         className="sidebar__link"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noreferrer noopener nofollow"
         title="Contact me on Facebook"
       >
         <FaFacebook />
